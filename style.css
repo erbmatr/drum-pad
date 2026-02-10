@@ -1,12 +1,14 @@
 body {
-    font-family:Arial,sans-serif;
+    font-family:'Roboto',sans-serif;
     background-color: #f4f4f4;
+    background: linear-gradient(135deg,#111,#222);
     text-align:center;
     padding:40px;
 }
+
 h1{
     margin-bottom: 30px;
-    color: black;   
+    color: whitesmoke;   
 }
 
 p{
@@ -21,7 +23,7 @@ p{
 
 h2{
     margin-bottom: 30px;
-    color: black; 
+    color: whitesmoke; 
 }
 
 .pad-container{
@@ -42,10 +44,15 @@ h2{
     justify-content: center;
     cursor: pointer;
     user-select: none;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
     font-weight: bold;
     font-size: 18px;
     box-shadow: insert 0 0 0 2px #555;
+}
+
+.pad:hover{
+    background: #444;
+    cursor: pointer;
 }
 
 .pad.active {

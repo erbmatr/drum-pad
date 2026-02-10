@@ -1,9 +1,11 @@
 const pads = document.querySelectorAll(".pad");
+const volumeControl = document.getElementById("volume");
 
 function playSound(pad) {
-    const sound = new Audio(pad.dataset.sound);
-    sound.currentTime = 0;
-    sound.play();
+    const audio = new Audio(pad.dataset.sound);
+    audio.volume = volumeControl.value || 1;
+    audio.currentTime = 0;
+    audio.play();
 
 
     pad.classList.add("active");
@@ -17,7 +19,7 @@ pads.forEach(pad => {
 
 // KEYBOARD PRESSES
 document.addEventListener("keydown",(e) => {
-    const key = e.key.toLocaleUpperCase();
+    const key = e.key;
     const pad = document.querySelector(`.pad[data-key="${key}"]`);
     if (pad) playSound(pad);
-})
+});
