@@ -1,0 +1,55 @@
+body {
+    font-family:Arial,sans-serif;
+    background-color: #f4f4f4;
+    text-align:center;
+    padding:40px;
+}
+h1{
+    margin-bottom: 30px;
+    color: black;   
+}
+
+p{
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.4;
+    color: grey ;
+    font-weight: 400;
+
+}
+
+h2{
+    margin-bottom: 30px;
+    color: black; 
+}
+
+.pad-container{
+    display:grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(3,120px);
+    justify-content: center;
+    gap:20px;
+}
+
+.pad{
+    width: 120px;
+    height: 120px;
+    background: #ADD8E6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s ease;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: insert 0 0 0 2px #555;
+}
+
+.pad.active {
+    background: #ff9800;
+    transform: scale(0.95);
+    box-shadow: 0 0 20px #ff9800; 
+}
